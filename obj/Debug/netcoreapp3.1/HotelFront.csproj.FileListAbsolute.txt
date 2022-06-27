@@ -1,0 +1,13 @@
+C:\Users\lucas.souza\Desktop\HotelFront\bin\Debug\netcoreapp3.1\HotelFront.exe
+C:\Users\lucas.souza\Desktop\HotelFront\bin\Debug\netcoreapp3.1\HotelFront.deps.json
+C:\Users\lucas.souza\Desktop\HotelFront\bin\Debug\netcoreapp3.1\HotelFront.runtimeconfig.json
+C:\Users\lucas.souza\Desktop\HotelFront\bin\Debug\netcoreapp3.1\HotelFront.runtimeconfig.dev.json
+C:\Users\lucas.souza\Desktop\HotelFront\bin\Debug\netcoreapp3.1\HotelFront.dll
+C:\Users\lucas.souza\Desktop\HotelFront\bin\Debug\netcoreapp3.1\HotelFront.pdb
+C:\Users\lucas.souza\Desktop\HotelFront\obj\Debug\netcoreapp3.1\HotelFront.csprojAssemblyReference.cache
+C:\Users\lucas.souza\Desktop\HotelFront\obj\Debug\netcoreapp3.1\HotelFront.AssemblyInfoInputs.cache
+C:\Users\lucas.souza\Desktop\HotelFront\obj\Debug\netcoreapp3.1\HotelFront.AssemblyInfo.cs
+C:\Users\lucas.souza\Desktop\HotelFront\obj\Debug\netcoreapp3.1\HotelFront.csproj.CoreCompileInputs.cache
+C:\Users\lucas.souza\Desktop\HotelFront\obj\Debug\netcoreapp3.1\HotelFront.dll
+C:\Users\lucas.souza\Desktop\HotelFront\obj\Debug\netcoreapp3.1\HotelFront.pdb
+C:\Users\lucas.souza\Desktop\HotelFront\obj\Debug\netcoreapp3.1\HotelFront.genruntimeconfig.cache
