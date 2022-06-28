@@ -58,22 +58,21 @@ namespace ExemploTela
 
             this.btnConfirm = new Button();
             this.btnConfirm.Text = "Confirmar";
-            this.btnConfirm.Location = new Point(940, 180);
+            this.btnConfirm.Location = new Point(945, 450);
             this.btnConfirm.Size = new Size(80, 30);
             
             //this.btnConfirm.Click += new EventHandler(this.handleConfirmClick);
-
             this.btnCancel = new Button();
             this.btnCancel.Text = "Cancelar";
-            this.btnCancel.Location = new Point(840, 180);
+            this.btnCancel.Location = new Point(845, 450);
             this.btnCancel.Size = new Size(80, 30);
             //this.btnCancel.Click += new EventHandler(this.handleCancelClick);
             //FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 
             pbImagem = new PictureBox();
-			pbImagem.Size = new Size(100,100);
-			pbImagem.Location = new Point(870,240);
-			pbImagem.ClientSize = new Size(100,100);
+			pbImagem.Size = new Size(150,150);
+			pbImagem.Location = new Point(860,180);
+			pbImagem.ClientSize = new Size(150,150);
 			pbImagem.Load("image.png");
 			pbImagem.SizeMode = PictureBoxSizeMode.Zoom;
 
