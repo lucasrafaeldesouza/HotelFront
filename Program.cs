@@ -28,13 +28,10 @@ namespace ExemploTela
     public class Login : Form
     {
         private System.ComponentModel.IContainer components = null;
-
         Label lblUser;
         Label lblPass;
-
         TextBox txtUser;
         TextBox txtPass;
-
         Button btnConfirm;
         Button btnCancel;
 
@@ -42,30 +39,32 @@ namespace ExemploTela
         {
             this.lblUser = new Label();
             this.lblUser.Text = "Usuário";
-            this.lblUser.Location = new Point(120, 20);
+            this.lblUser.Location = new Point(700, 52);
+            this.lblUser.Size = new Size(50, 30);
 
             this.lblPass = new Label();
             this.lblPass.Text = "Senha";
-            this.lblPass.Location = new Point(120, 80);
+            this.lblPass.Location = new Point(700, 112);
 
             this.txtUser = new TextBox();
-            this.txtUser.Location = new Point(10, 50);
+            this.txtUser.Location = new Point(800, 50);
             this.txtUser.Size = new Size(280, 30);
 
             this.txtPass = new TextBox();
-            this.txtPass.Location = new Point(10, 110);
+            this.txtPass.Location = new Point(800, 110);
             this.txtPass.Size = new Size(280, 30);
             this.txtPass.PasswordChar = '*';
 
             this.btnConfirm = new Button();
             this.btnConfirm.Text = "Confirmar";
-            this.btnConfirm.Location = new Point(100, 180);
+            this.btnConfirm.Location = new Point(940, 180);
             this.btnConfirm.Size = new Size(80, 30);
+            
             //this.btnConfirm.Click += new EventHandler(this.handleConfirmClick);
 
             this.btnCancel = new Button();
             this.btnCancel.Text = "Cancelar";
-            this.btnCancel.Location = new Point(100, 220);
+            this.btnCancel.Location = new Point(840, 180);
             this.btnCancel.Size = new Size(80, 30);
             //this.btnCancel.Click += new EventHandler(this.handleCancelClick);
 
@@ -77,10 +76,12 @@ namespace ExemploTela
 
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
+           
 
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1380, 900);
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = FormBorderStyle.None;
             this.Text = "Login";
             this.StartPosition = FormStartPosition.CenterScreen;
         }

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "MdfTooLDe3nDbgN3l8nA8bLp8oMSswJWhpwEPlnKoR+LkUeB2naXj/5OPPC0Ec0n6pAAlkW96h0PR3uq82S2XQ==",
+  "dgSpecHash": "UsrSb+3McdwgZ6++9BL6PVekKxKEjyV17K9PT9jktpPxn1TyjqTOU6KQjHz1Tv25A11mcGbrhogL71DFvLJmYg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lucas.souza\\Desktop\\HotelFront\\HotelFront.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\lucas.souza3\\Desktop\\HotelFront\\HotelFront.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lucas.souza3\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
+  ],
   "logs": []
 }
