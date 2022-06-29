@@ -39,6 +39,7 @@ namespace TelaLogin
 
         public Login()
         {
+
             this.lblUser = new Label();
             this.lblUser.Text = "Usuário";
             this.lblUser.Location = new Point(700, 350);
@@ -73,13 +74,13 @@ namespace TelaLogin
 
             this.btnConfirm = new Button();
             this.btnConfirm.Text = "Confirmar";
-            this.btnConfirm.Location = new Point(945, 450);
+            this.btnConfirm.Location = new Point(845, 450);
             this.btnConfirm.Size = new Size(80, 30);
             this.btnConfirm.Click += new EventHandler(this.handleConfirmClick);
 
             this.btnCancel = new Button();
             this.btnCancel.Text = "Cancelar";
-            this.btnCancel.Location = new Point(845, 450);
+            this.btnCancel.Location = new Point(945, 450);
             this.btnCancel.Size = new Size(80, 30);
             //this.btnCancel.Click += new EventHandler(this.handleCancelClick);
             //FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -128,23 +129,6 @@ namespace TelaLogin
 
         }
 
-        /*
-        private void handleConfirmClick(object sender, EventArgs e)
-        {
-            if (this.txtUser.Text == "user" && this.txtPass.Text == "123")
-        {
-            Produtos form = new Produtos();
-            this.WindowState = FormWindowState.Maximized;
-            form.Show();
-        }
-        else
-        {
-            //Tags form = new Tags();
-            //form.Show();
-
-        }
-         */   
-
         }
     }
 
@@ -172,7 +156,7 @@ namespace TelaLogin
         public Cliente()
         {
             this.lblTitulo = new Label();
-            this.lblTitulo.Text = "Cadastro de Reserva";
+            this.lblTitulo.Text = "Cadastro de Usuario";
             this.lblTitulo.Location = new Point(20, 20);
             this.lblTitulo.Size = new Size(200, 30);
             this.lblTitulo.ForeColor = Color.Green;
