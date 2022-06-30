@@ -1,0 +1,5 @@
+C:\Users\lucas.souza3\Desktop\HotelFront\bin\Debug\netcoreapp3.1\publish\HotelFront.exe
+C:\Users\lucas.souza3\Desktop\HotelFront\bin\Debug\netcoreapp3.1\publish\HotelFront.dll
+C:\Users\lucas.souza3\Desktop\HotelFront\bin\Debug\netcoreapp3.1\publish\HotelFront.deps.json
+C:\Users\lucas.souza3\Desktop\HotelFront\bin\Debug\netcoreapp3.1\publish\HotelFront.runtimeconfig.json
+C:\Users\lucas.souza3\Desktop\HotelFront\bin\Debug\netcoreapp3.1\publish\HotelFront.pdb

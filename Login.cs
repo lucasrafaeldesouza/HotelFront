@@ -113,31 +113,33 @@ namespace TelaLogin
             this.StartPosition = FormStartPosition.CenterScreen;
 
         }
-        
+
 
         private void handleConfirmClick(object sender, EventArgs e)
         {
-        if (this.txtUser.Text == "user" && this.txtPass.Text == "123")
-        {
-            Cliente form = new Cliente();
-            form.Show();
-        }
-        else
-        {
-            Funcionario form = new Funcionario();
-            form.Show();
+            if (this.txtUser.Text == "user" && this.txtPass.Text == "123")
+            {
+                Cliente form = new Cliente();
+                form.Show();
+            }
+            else
+            {
+                Funcionario form = new Funcionario();
+                form.Show();
 
-        }
+            }
 
         }
     }
 
     public class Cliente : Form
-        {
+    {
 
         Label lblTitulo;
+        Label lblPessoais;
+        Label lblCartao;
         Label lblNome;
-        Label lblEmail;
+        Label lblMae;
         Label lblCpf;
         Label lblFone;
         Label lblEndereço;
@@ -145,16 +147,24 @@ namespace TelaLogin
         Label lblCidade;
         Label lblEstado;
         Label lblCep;
-
+        Label lblSenhaUser;
         TextBox txtNome;
-        TextBox txtEmail;
+        TextBox txtMae;
         TextBox txtCpf;
         TextBox txtFone;
         TextBox txtEndereco;
         TextBox txtCep;
 
+        Label lblNumeroCartao;
+        Label lblCvv;
+        Label lblValidade;
+        Label lblSenha;
+
+
+
         public Cliente()
         {
+            //LABEL
             this.lblTitulo = new Label();
             this.lblTitulo.Text = "Cadastro de Usuario";
             this.lblTitulo.Location = new Point(20, 20);
@@ -162,161 +172,160 @@ namespace TelaLogin
             this.lblTitulo.ForeColor = Color.Green;
             this.lblTitulo.Font = new Font("Calibri", 15);
 
+            //LABEL
+            //PRIMEIRA FILEIRA
+
+            this.lblPessoais = new Label();
+            this.lblPessoais.Text = "Dados pessoais";
+            this.lblPessoais.Location = new Point(550, 100);
+            this.lblPessoais.Size = new Size(200, 30);
+            this.lblPessoais.ForeColor = Color.Green;
+            this.lblPessoais.Font = new Font("Calibri", 15);
+            
             this.lblNome = new Label();
             this.lblNome.Text = "Nome";
-            this.lblNome.Location = new Point(20, 80);
+            this.lblNome.Location = new Point(550, 150);
             this.lblNome.Size = new Size(60, 30);
             this.lblNome.ForeColor = Color.Black;
             this.lblNome.Font = new Font("Calibri", 15);
+            
 
-            this.lblEmail = new Label();
-            this.lblEmail.Text = "Email";
-            this.lblEmail.Location = new Point(400, 80);
-            this.lblEmail.Size = new Size(60, 30);
-            this.lblEmail.ForeColor = Color.Black;
-            this.lblEmail.Font = new Font("Calibri", 15);
+            this.lblMae = new Label();
+            this.lblMae.Text = "Nome da mãe";
+            this.lblMae.Location = new Point(870, 150);
+            this.lblMae.Size = new Size(130, 30);
+            this.lblMae.ForeColor = Color.Black;
+            this.lblMae.Font = new Font("Calibri", 15);
+            
 
             this.lblCpf = new Label();
             this.lblCpf.Text = "CPF";
-            this.lblCpf.Location = new Point(770, 80);
-            this.lblCpf.Size = new Size(40, 30);
+            this.lblCpf.Location = new Point(1110, 150);
+            this.lblCpf.Size = new Size(40, 25);
             this.lblCpf.ForeColor = Color.Black;
             this.lblCpf.Font = new Font("Calibri", 15);
+            
+
+            //SEGUNDA FILEIRA
 
             this.lblFone = new Label();
             this.lblFone.Text = "Fone";
-            this.lblFone.Location = new Point(20, 150);
+            this.lblFone.Location = new Point(550, 220);
             this.lblFone.Size = new Size(60, 30);
             this.lblFone.ForeColor = Color.Black;
             this.lblFone.Font = new Font("Calibri", 15);
 
             this.lblEndereço = new Label();
             this.lblEndereço.Text = "End.";
-            this.lblEndereço.Location = new Point(400, 150);
+            this.lblEndereço.Location = new Point(750, 220);
             this.lblEndereço.Size = new Size(60, 30);
             this.lblEndereço.ForeColor = Color.Black;
             this.lblEndereço.Font = new Font("Calibri", 15);
 
             this.lblCep = new Label();
             this.lblCep.Text = "CEP";
-            this.lblCep.Location = new Point(770, 150);
+            this.lblCep.Location = new Point(1110, 220);
             this.lblCep.Size = new Size(40, 30);
             this.lblCep.ForeColor = Color.Black;
             this.lblCep.Font = new Font("Calibri", 15);
 
-            this.txtNome = new TextBox();
-            this.txtNome.Location = new Point(80, 80);
-            this.txtNome.Size = new Size(280, 30);
+            this.lblSenhaUser = new Label();
+            this.lblSenhaUser.Text = "Crie uma senha para acesso";
+            this.lblSenhaUser.Location = new Point(550, 300);
+            this.lblSenhaUser.Size = new Size(400, 30);
+            this.lblSenhaUser.ForeColor = Color.Black;
+            this.lblSenhaUser.Font = new Font("Calibri", 15);
+            
 
-            this.txtEmail = new TextBox();
-            this.txtEmail.Location = new Point(460, 80);
-            this.txtEmail.Size = new Size(200, 30);
+            //INPUT
+
+            //PRIMEIRA FILEIRA
+            this.txtNome = new TextBox();
+            this.txtNome.Location = new Point(550, 180);
+            this.txtNome.Size = new Size(280, 30);
+            this.txtNome.Text = "Digite seu nome...";
+            this.txtNome.ForeColor = Color.Black;
+
+            this.txtMae = new TextBox();
+            this.txtMae.Location = new Point(870, 180);
+            this.txtMae.Size = new Size(200, 30);
+            this.txtMae.Text = "Digite o nome da sua mãe";
+            this.txtMae.ForeColor = Color.Black;
 
             this.txtCpf = new TextBox();
-            this.txtCpf.Location = new Point(815, 80);
+            this.txtCpf.Location = new Point(1110, 180);
             this.txtCpf.Size = new Size(100, 30);
+            this.txtCpf.Text = "Digite seu CPF...";
+            this.txtCpf.ForeColor = Color.Black;
 
+
+            //SEGUNDA FILEIRA
             this.txtFone = new TextBox();
-            this.txtFone.Location = new Point(80, 150);
+            this.txtFone.Location = new Point(550, 250);
             this.txtFone.Size = new Size(120, 30);
+            this.txtFone.Text = "Digite seu telefone...";
+            this.txtFone.ForeColor = Color.Black;
 
             this.txtEndereco = new TextBox();
-            this.txtEndereco.Location = new Point(460, 150);
+            this.txtEndereco.Location = new Point(750, 250);
             this.txtEndereco.Size = new Size(280, 30);
+            this.txtEndereco.Text = "Digite seu endereço...";
+            this.txtEndereco.ForeColor = Color.Black;
 
             this.txtCep = new TextBox();
-            this.txtCep.Location = new Point(815, 150);
+            this.txtCep.Location = new Point(1110, 250);
             this.txtCep.Size = new Size(100, 30);
+            this.txtCep.Text = "Digite seu cep...";
+            this.txtCep.ForeColor = Color.Black;
+
+            this.lblCartao = new Label();
+            this.lblCartao.Text = "Dados do cartão";
+            this.lblCartao.Location = new Point(550, 420);
+            this.lblCartao.Size = new Size(200, 30);
+            this.lblCartao.ForeColor = Color.Green;
+            this.lblCartao.Font = new Font("Calibri", 15);
+
+            this.lblNumeroCartao = new Label();
+            this.lblNumeroCartao.Text = "N° do Cartão";
+            this.lblNumeroCartao.Location = new Point(550, 470);
+            this.lblNumeroCartao.Size = new Size(120, 30);
+            this.lblNumeroCartao.ForeColor = Color.Black;
+            this.lblNumeroCartao.Font = new Font("Calibri", 15);
 
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblMae);
             this.Controls.Add(this.lblCpf);
             this.Controls.Add(this.lblFone);
             this.Controls.Add(this.lblEndereço);
             this.Controls.Add(this.lblCep);
+            this.Controls.Add(this.lblPessoais);
+            this.Controls.Add(this.lblCartao);
+            this.Controls.Add(this.lblNumeroCartao);
+            this.Controls.Add(this.lblSenhaUser);
 
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtMae);
             this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.txtFone);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.txtCep);
 
 
-        this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Maximized;
 
         }
-        
+
     }
 
-       public class Funcionario : Form
-        {
+    public class Funcionario : Form
+    {
 
         public Funcionario()
         {
 
         }
-        
+
     }
 
 }
-
-    
-    /*Inicio da tela de Produtos
-     public class Produtos : Form
-        {
-
-        ListView listView;
-        Label lblProdutos;
-
-
-        public Produtos()
-        {
-
-            this.lblProdutos = new Label();
-            this.lblProdutos.Text = "Produtos";
-            this.lblProdutos.Location = new Point(500, 50);
-            this.lblProdutos.Size = new Size(180, 50);
-            this.lblProdutos.ForeColor = Color.Green;
-            this.lblProdutos.Font = new Font("Calibri", 26);
-
-            listView = new ListView();
-			listView.Location = new Point(500, 180);
-			listView.Size = new Size(525,200);
-			listView.View = View.Details;
-
-			ListViewItem PrimeiroItem = new ListViewItem("X-Salada completo");
-			PrimeiroItem.SubItems.Add("Sanduiche com bastando gordura");
-            PrimeiroItem.SubItems.Add("2");
-			PrimeiroItem.SubItems.Add("R$10,00");
-			PrimeiroItem.SubItems.Add("R$20,00");
-
-			ListViewItem SegundoItem = new ListViewItem("Coca-Cola");
-			SegundoItem.SubItems.Add("Refrigerante que tem muito açucar");	
-			SegundoItem.SubItems.Add("2");	
-            SegundoItem.SubItems.Add("R$7,00");	
-			SegundoItem.SubItems.Add("R$14,00");	
-
-			listView.Items.AddRange(new ListViewItem[]{PrimeiroItem, SegundoItem});
-			listView.Columns.Add("Produto", -2, HorizontalAlignment.Left);
-    		listView.Columns.Add("Descrição", -2, HorizontalAlignment.Left);
-			listView.Columns.Add("Quantidade", -2, HorizontalAlignment.Left);
-            listView.Columns.Add("Val Unitario", -2, HorizontalAlignment.Left);
-    		listView.Columns.Add("Valor Total", -2, HorizontalAlignment.Left);
-			listView.FullRowSelect = true;
-			listView.GridLines = true;
-			listView.AllowColumnReorder = true;
-			listView.Sorting = SortOrder.Ascending;
-
-
-            this.Controls.Add(listView);
-            this.Controls.Add(this.lblProdutos);
-            this.WindowState = FormWindowState.Maximized;
-
-        }
-        
-    }
-    Fim da tela de Produtos
-    */ 
-    
