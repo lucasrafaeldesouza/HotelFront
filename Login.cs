@@ -45,32 +45,24 @@ namespace TelaLogin
             this.lblUser.Location = new Point(800, 350);
             this.lblUser.Size = new Size(100, 30);
             this.lblUser.ForeColor = Color.Black;
-            this.lblUser.Font = new Font("Roboto", 15, FontStyle.Bold);
+            this.lblUser.Font = new Font("Roboto", 13, FontStyle.Bold);
 
             this.lblPass = new Label();
             this.lblPass.Text = "Senha";
             this.lblPass.Location = new Point(800, 415);
             this.lblPass.ForeColor = Color.Black;
-            this.lblPass.Font = new Font("Roboto", 15, FontStyle.Bold);
-
-            linkCadastro = new LinkLabel();
-            linkCadastro.Location = new Point(880, 470);
-            linkCadastro.Size = new Size(180, 30);
-            linkCadastro.Text = "Esqueceu sua senha?";
-            linkCadastro.ForeColor = Color.Green;
-            //linkCadastro.LinkClicked += new LinkLabelLinkClickedEventHandler(this.helpLink);
+            this.lblPass.Font = new Font("Roboto", 13, FontStyle.Bold);
 
             this.lblCriarConta = new Label();
             this.lblCriarConta.Text = "Ainda não tem conta?";
             this.lblCriarConta.Location = new Point(800, 550);
             this.lblCriarConta.Size = new Size(190, 30);
             this.lblCriarConta.ForeColor = Color.DarkGreen;
-            this.lblCriarConta.Font = new Font("Roboto", 13, FontStyle.Bold);
+            this.lblCriarConta.Font = new Font("Roboto", 10);
 
             this.txtUser = new MaskedTextBox();
             this.txtUser.Location = new Point(800, 380);
             this.txtUser.Size = new Size(280, 30);
-
 
             this.txtPass = new TextBox();
             this.txtPass.Location = new Point(800, 445);
@@ -79,7 +71,7 @@ namespace TelaLogin
 
             this.btnConfirm = new Button();
             this.btnConfirm.Text = "Confirmar";
-            this.btnConfirm.Font = new Font("Roboto", 16);
+            this.btnConfirm.Font = new Font("Roboto", 13);
             this.btnConfirm.Location = new Point(800, 500);
             this.btnConfirm.Size = new Size(280, 30);
             //this.btnConfirm.Click += new EventHandler(this.handleConfirmClick);
@@ -113,29 +105,10 @@ namespace TelaLogin
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.WindowState = FormWindowState.Maximized;
-            this.BackColor = Color.FromArgb(144, 238, 144);
+            this.BackColor = Color.FromArgb(213, 255, 222);
             this.Text = "Login";
             this.StartPosition = FormStartPosition.CenterScreen;
         }
-
-        /*
-        private void handleConfirmClick(object sender, EventArgs e)
-        {
-            if (this.txtUser.Text == "user" && this.txtPass.Text == "123")
-            {
-                Cliente form = new Cliente();
-                form.Show();
-            }
-            else
-            {
-                Funcionario form = new Funcionario();
-                form.Show();
-
-            }
-
-        }
-        */
-
         private void handleCadastro(object sender, EventArgs e)
         {
             Cliente form = new Cliente();
@@ -153,7 +126,7 @@ namespace TelaLogin
         Label lblNome;
         Label lblMae;
         Label lblCpf;
-        Label lblFone;
+        Label lblDataNascimento;
         Label lblEmpresa;
         Label lblCidade;
         Label lblEstado;
@@ -161,7 +134,7 @@ namespace TelaLogin
         TextBox txtNome;
         TextBox txtMae;
         MaskedTextBox txtCpf;
-        MaskedTextBox txtFone;
+        MaskedTextBox txtDataAniversario;
         PictureBox pbImagem;
         Label lblNumeroCartao;
         Label lblCvv;
@@ -218,12 +191,12 @@ namespace TelaLogin
 
 
             //SEGUNDA FILEIRA
-            this.lblFone = new Label();
-            this.lblFone.Text = "Fone";
-            this.lblFone.Location = new Point(600, 220);
-            this.lblFone.Size = new Size(60, 30);
-            this.lblFone.ForeColor = Color.Black;
-            this.lblFone.Font = new Font("Roboto", 15);
+            this.lblDataNascimento = new Label();
+            this.lblDataNascimento.Text = "Data de nascimento";
+            this.lblDataNascimento.Location = new Point(600, 220);
+            this.lblDataNascimento.Size = new Size(250, 30);
+            this.lblDataNascimento.ForeColor = Color.Black;
+            this.lblDataNascimento.Font = new Font("Roboto", 15);
 
             this.lblSenhaUser = new Label();
             this.lblSenhaUser.Text = "Crie uma senha";
@@ -261,12 +234,12 @@ namespace TelaLogin
             this.txtCpf.Mask = "000,000,000-00";
 
             //SEGUNDA FILEIRA
-            this.txtFone = new MaskedTextBox();
-            this.txtFone.Location = new Point(600, 250);
-            this.txtFone.Size = new Size(120, 30);
-            this.txtFone.Text = "Digite seu telefone...";
-            this.txtFone.ForeColor = Color.Black;
-            this.txtFone.Mask = "(00)00000-0000";
+            this.txtDataAniversario = new MaskedTextBox();
+            this.txtDataAniversario.Location = new Point(600, 250);
+            this.txtDataAniversario.Size = new Size(70, 30);
+            this.txtDataAniversario.Text = "Digite seu telefone...";
+            this.txtDataAniversario.ForeColor = Color.Black;
+            this.txtDataAniversario.Mask = "00/00/0000";
 
             this.txtSenhaUser = new TextBox();
             this.txtSenhaUser.Location = new Point(920, 250);
@@ -340,7 +313,7 @@ namespace TelaLogin
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.lblMae);
             this.Controls.Add(this.lblCpf);
-            this.Controls.Add(this.lblFone);
+            this.Controls.Add(this.lblDataNascimento);
             this.Controls.Add(this.lblPessoais);
             this.Controls.Add(this.lblCartao);
             this.Controls.Add(this.lblNumeroCartao);
@@ -352,7 +325,7 @@ namespace TelaLogin
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtMae);
             this.Controls.Add(this.txtCpf);
-            this.Controls.Add(this.txtFone);
+            this.Controls.Add(this.txtDataAniversario);
             this.Controls.Add(this.txtNumeroCartao);
             this.Controls.Add(this.txtSenhaUser);
             this.Controls.Add(this.txtCvv);
