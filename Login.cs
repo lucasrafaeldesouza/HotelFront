@@ -113,7 +113,6 @@ namespace TelaLogin
         {
             Cliente form = new Cliente();
             form.Show();
-
         }
     }
 
@@ -147,6 +146,7 @@ namespace TelaLogin
         MaskedTextBox txtValidade;
         Label lblSenhaCartao;
         TextBox txtSenhaCartao;
+        ProgressBar pbTest;
 
 
         public Cliente()
@@ -287,6 +287,7 @@ namespace TelaLogin
             this.btnSenhaUser.Size = new Size(120, 30);
             this.btnSenhaUser.Text = "Confirmar";
             this.btnSenhaUser.ForeColor = Color.Black;
+            this.btnSenhaUser.Click += new EventHandler(this.handleConfirmClick);
 
             this.txtNumeroCartao = new TextBox();
             this.txtNumeroCartao.Location = new Point(600, 480);
@@ -308,6 +309,15 @@ namespace TelaLogin
             this.txtSenhaCartao.Location = new Point(600, 560);
             this.txtSenhaCartao.Size = new Size(180, 30);
             this.txtSenhaCartao.ForeColor = Color.Black;
+
+            pbTest = new ProgressBar();
+			pbTest.Location = new Point(800, 700);
+            pbTest.Size = new Size(300,15);
+			pbTest.Value = 0;
+            pbTest.Maximum = 5;
+            pbTest.Step = 1;
+			// pbTest.Style = ProgressBarStyle.Marquee;
+			// pbTest.MarqueeAnimationSpeed = 30;
 
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblNome);
@@ -334,6 +344,8 @@ namespace TelaLogin
             this.Controls.Add(this.btnSenhaUser);
             this.Controls.Add(pbImagem);
 
+            this.Controls.Add(pbTest);
+
             this.WindowState = FormWindowState.Maximized;
         }
         private void handleConfirmCadastro(object sender, EventArgs e)
@@ -347,9 +359,17 @@ namespace TelaLogin
             {
                 MessageBox.Show("Dados cadastrados com sucesso");
                 return;
-
             }
 
+        }
+
+        private void handleConfirmClick(object sender, EventArgs e) {
+			
+
+            for(int i = 0; i < 100; i++){
+                Thread.Sleep(500);
+                pbTest.PerformStep();
+            }
         }
     }
 }
