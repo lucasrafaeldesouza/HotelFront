@@ -136,7 +136,8 @@ namespace TelaLogin
         PictureBox pbDp;
         PictureBox pbCartao;
         PictureBox pbBarra;
-        Button btnSenhaUser;
+        PictureBox pbBancos;
+        Button btnCadastrar;
 
         public Cliente()
         {
@@ -267,12 +268,20 @@ namespace TelaLogin
             this.txtValidade.ForeColor = Color.Black;
             this.txtValidade.Mask = "00/00";
 
-            this.btnSenhaUser = new Button();
-            this.btnSenhaUser.Location = new Point(1110, 800);
-            this.btnSenhaUser.Size = new Size(120, 30);
-            this.btnSenhaUser.Text = "Confirmar";
-            this.btnSenhaUser.ForeColor = Color.Black;
-            this.btnSenhaUser.Click += new EventHandler(this.handleConfirmClick);
+            this.btnCadastrar = new Button();
+            this.btnCadastrar.Location = new Point(1130, 800);
+            this.btnCadastrar.Size = new Size(120, 30);
+            this.btnCadastrar.Text = "Confirmar";
+            this.btnCadastrar.Font = new Font("Roboto", 13, FontStyle.Bold);
+            this.btnCadastrar.ForeColor = Color.Black;
+            this.btnCadastrar.Click += new EventHandler(this.handleConfirmClick);
+
+            pbBarra = new PictureBox();
+            pbBarra.Size = new Size(150, 150);
+            pbBarra.Location = new Point(560, 260);
+            pbBarra.ClientSize = new Size(750, 150);
+            pbBarra.Load("barra.png");
+            pbBarra.SizeMode = PictureBoxSizeMode.Zoom;
 
             pbDp = new PictureBox();
             pbDp.Size = new Size(150, 150);
@@ -288,12 +297,13 @@ namespace TelaLogin
             pbCartao.Load("cartao.png");
             pbCartao.SizeMode = PictureBoxSizeMode.Zoom;
 
-            pbBarra = new PictureBox();
-            pbBarra.Size = new Size(150, 150);
-            pbBarra.Location = new Point(560, 260);
-            pbBarra.ClientSize = new Size(750, 150);
-            pbBarra.Load("barra.png");
-            pbBarra.SizeMode = PictureBoxSizeMode.Zoom;
+            pbBancos = new PictureBox();
+            pbBancos.Size = new Size(150, 150);
+            pbBancos.Location = new Point(670, 400);
+            pbBancos.ClientSize = new Size(500, 500);
+            pbBancos.Load("bancos.png");
+            pbBancos.SizeMode = PictureBoxSizeMode.Zoom;
+
 
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblNome);
@@ -315,10 +325,11 @@ namespace TelaLogin
             this.Controls.Add(this.txtSenhaUser);
             this.Controls.Add(this.txtCvv);
             this.Controls.Add(this.txtValidade);
-            this.Controls.Add(this.btnSenhaUser);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(pbDp);
             this.Controls.Add(pbCartao);
             this.Controls.Add(pbBarra);
+            this.Controls.Add(pbBancos);
             this.WindowState = FormWindowState.Maximized;
         }
         private void handleConfirmClick(object sender, EventArgs e)
