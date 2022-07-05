@@ -29,17 +29,14 @@ namespace TelaLogin
         private System.ComponentModel.IContainer components = null;
         Label lblUser;
         Label lblPass;
+        Label lblCriarConta;
         MaskedTextBox txtUser;
         TextBox txtPass;
         Button btnConfirm;
-        PictureBox pbImagem;
-        Label lblCadastro;
-        LinkLabel linkCadastro;
-        Label lblCriarConta;
+        PictureBox pbLogo;
         Button btnCriarConta;
         public Login()
         {
-
             this.lblUser = new Label();
             this.lblUser.Text = "Usuário";
             this.lblUser.Location = new Point(800, 350);
@@ -76,12 +73,12 @@ namespace TelaLogin
             this.btnConfirm.Size = new Size(280, 30);
             //this.btnConfirm.Click += new EventHandler(this.handleConfirmClick);
 
-            this.pbImagem = new PictureBox();
-            this.pbImagem.Size = new Size(150, 150);
-            this.pbImagem.Location = new Point(860, 180);
-            this.pbImagem.ClientSize = new Size(150, 150);
-            this.pbImagem.Load("image.png");
-            this.pbImagem.SizeMode = PictureBoxSizeMode.Zoom;
+            this.pbLogo = new PictureBox();
+            this.pbLogo.Size = new Size(150, 150);
+            this.pbLogo.Location = new Point(860, 180);
+            this.pbLogo.ClientSize = new Size(150, 150);
+            this.pbLogo.Load("logo.png");
+            this.pbLogo.SizeMode = PictureBoxSizeMode.Zoom;
 
             this.btnCriarConta = new Button();
             this.btnCriarConta.Text = "Cadastrar-se";
@@ -92,16 +89,14 @@ namespace TelaLogin
 
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.lblPass);
-            this.Controls.Add(this.lblCadastro);
             this.Controls.Add(this.lblCriarConta);
 
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(pbImagem);
-            this.Controls.Add(this.linkCadastro);
             this.Controls.Add(this.btnCriarConta);
-
+            this.Controls.Add(pbLogo);
+            
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.WindowState = FormWindowState.Maximized;
@@ -118,7 +113,6 @@ namespace TelaLogin
 
     public class Cliente : Form
     {
-
         Label lblTitulo;
         Label lblPessoais;
         Label lblCartao;
@@ -126,14 +120,10 @@ namespace TelaLogin
         Label lblMae;
         Label lblCpf;
         Label lblDataNascimento;
-        Label lblEmpresa;
-        Label lblCidade;
-        Label lblEstado;
         Label lblSenhaUser;
         Label lblNumeroCartao;
         Label lblCvv;
         Label lblValidade;
-        Label lblSenha;
         TextBox txtNome;
         TextBox txtMae;
         TextBox txtNumeroCartao;
@@ -146,7 +136,6 @@ namespace TelaLogin
         PictureBox pbCartao;
         PictureBox pbBarra;
         Button btnSenhaUser;
-        //ProgressBar pbTest;
 
         public Cliente()
         {
@@ -199,6 +188,34 @@ namespace TelaLogin
             this.lblSenhaUser.ForeColor = Color.Black;
             this.lblSenhaUser.Font = new Font("Roboto", 15);
 
+            this.lblCartao = new Label();
+            this.lblCartao.Text = "Dados cartão";
+            this.lblCartao.Location = new Point(550, 390);
+            this.lblCartao.Size = new Size(140, 30);
+            this.lblCartao.ForeColor = Color.Green;
+            this.lblCartao.Font = new Font("Roboto", 15);
+
+            this.lblNumeroCartao = new Label();
+            this.lblNumeroCartao.Text = "N° do Cartão";
+            this.lblNumeroCartao.Location = new Point(600, 440);
+            this.lblNumeroCartao.Size = new Size(300, 30);
+            this.lblNumeroCartao.ForeColor = Color.Black;
+            this.lblNumeroCartao.Font = new Font("Roboto", 15);
+
+            this.lblCvv = new Label();
+            this.lblCvv.Text = "CVV";
+            this.lblCvv.Location = new Point(920, 440);
+            this.lblCvv.Size = new Size(100, 30);
+            this.lblCvv.ForeColor = Color.Black;
+            this.lblCvv.Font = new Font("Roboto", 15);
+            
+            this.lblValidade = new Label();
+            this.lblValidade.Text = "Validade";
+            this.lblValidade.Location = new Point(1160, 440);
+            this.lblValidade.Size = new Size(300, 30);
+            this.lblValidade.ForeColor = Color.Black;
+            this.lblValidade.Font = new Font("Roboto", 15);
+
             this.txtNome = new TextBox();
             this.txtNome.Location = new Point(600, 180);
             this.txtNome.Size = new Size(280, 30);
@@ -231,41 +248,6 @@ namespace TelaLogin
             this.txtSenhaUser.ForeColor = Color.Black;
             this.txtSenhaUser.PasswordChar = '*';
 
-            this.lblCartao = new Label();
-            this.lblCartao.Text = "Dados cartão";
-            this.lblCartao.Location = new Point(550, 390);
-            this.lblCartao.Size = new Size(140, 30);
-            this.lblCartao.ForeColor = Color.Green;
-            this.lblCartao.Font = new Font("Roboto", 15);
-
-            this.lblNumeroCartao = new Label();
-            this.lblNumeroCartao.Text = "N° do Cartão";
-            this.lblNumeroCartao.Location = new Point(600, 440);
-            this.lblNumeroCartao.Size = new Size(300, 30);
-            this.lblNumeroCartao.ForeColor = Color.Black;
-            this.lblNumeroCartao.Font = new Font("Roboto", 15);
-
-            this.lblCvv = new Label();
-            this.lblCvv.Text = "CVV";
-            this.lblCvv.Location = new Point(920, 440);
-            this.lblCvv.Size = new Size(100, 30);
-            this.lblCvv.ForeColor = Color.Black;
-            this.lblCvv.Font = new Font("Roboto", 15);
-            
-            this.lblValidade = new Label();
-            this.lblValidade.Text = "Validade";
-            this.lblValidade.Location = new Point(1160, 440);
-            this.lblValidade.Size = new Size(300, 30);
-            this.lblValidade.ForeColor = Color.Black;
-            this.lblValidade.Font = new Font("Roboto", 15);
-
-            this.btnSenhaUser = new Button();
-            this.btnSenhaUser.Location = new Point(1110, 800);
-            this.btnSenhaUser.Size = new Size(120, 30);
-            this.btnSenhaUser.Text = "Confirmar";
-            this.btnSenhaUser.ForeColor = Color.Black;
-            this.btnSenhaUser.Click += new EventHandler(this.handleConfirmClick);
-
             this.txtNumeroCartao = new TextBox();
             this.txtNumeroCartao.Location = new Point(600, 480);
             this.txtNumeroCartao.Size = new Size(180, 30);
@@ -283,6 +265,13 @@ namespace TelaLogin
             this.txtValidade.Size = new Size(50, 30);
             this.txtValidade.ForeColor = Color.Black;
             this.txtValidade.Mask = "00/00";
+
+            this.btnSenhaUser = new Button();
+            this.btnSenhaUser.Location = new Point(1110, 800);
+            this.btnSenhaUser.Size = new Size(120, 30);
+            this.btnSenhaUser.Text = "Confirmar";
+            this.btnSenhaUser.ForeColor = Color.Black;
+            this.btnSenhaUser.Click += new EventHandler(this.handleConfirmClick);
 
             pbDp = new PictureBox();
             pbDp.Size = new Size(150, 150);
@@ -304,15 +293,6 @@ namespace TelaLogin
             pbBarra.ClientSize = new Size(750, 150);
             pbBarra.Load("barra.png");
             pbBarra.SizeMode = PictureBoxSizeMode.Zoom;
-
-            /*pbTest = new ProgressBar();
-			pbTest.Location = new Point(800, 700);
-            pbTest.Size = new Size(300,15);
-			pbTest.Value = 0;
-            pbTest.Maximum = 5;
-            pbTest.Step = 1;
-			pbTest.Style = ProgressBarStyle.Marquee;
-			pbTest.MarqueeAnimationSpeed = 30;*/
 
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblNome);
@@ -338,40 +318,19 @@ namespace TelaLogin
             this.Controls.Add(pbDp);
             this.Controls.Add(pbCartao);
             this.Controls.Add(pbBarra);
-            //this.Controls.Add(pbTest);
             this.WindowState = FormWindowState.Maximized;
         }
         private void handleConfirmClick(object sender, EventArgs e)
         {
             if (txtSenhaUser.Text.Length < 8)
             {
-                MessageBox.Show( "A senha deve ter no minimo 8 caracteres", "Erro", 
-                MessageBoxButtons.OK, 
-                //MessageBoxIcon.Warning // for Warning  
-                MessageBoxIcon.Error // for Error 
-                //MessageBoxIcon.Information  // for Information
-                //MessageBoxIcon.Question // for Question
-                );
+                MessageBox.Show( "A senha deve ter no minimo 8 caracteres", "Erro",  MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Dados cadastrados com sucesso", "Sucesso", MessageBoxButtons.OK,  
-                MessageBoxIcon.Information 
-                ); 
-            }
-
-        }
-
-        /*
-        private void handleConfirmClick(object sender, EventArgs e) 
-        {
-            for(int i = 0; i < 100; i++)
-            {
-                Thread.Sleep(500);
-                pbTest.PerformStep();
+                MessageBox.Show("Dados cadastrados com sucesso", "Sucesso", MessageBoxButtons.OK,MessageBoxIcon.Information ); 
             }
         }
-        */
 
     }
 }
