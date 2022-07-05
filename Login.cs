@@ -35,6 +35,7 @@ namespace TelaLogin
         Button btnConfirm;
         PictureBox pbLogo;
         Button btnCriarConta;
+        
         public Login()
         {
             this.lblUser = new Label();
